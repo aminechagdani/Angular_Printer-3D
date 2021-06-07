@@ -3,14 +3,22 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ProduitComponent } from './produit/produit.component';
+import {HttpClientModule} from "@angular/common/http";
+import {FormsModule} from "@angular/forms";
+import { AddProduitComponent } from './add-produit/add-produit.component';
+import { EditProduitComponent } from './edit-produit/edit-produit.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ProduitComponent,
+    AddProduitComponent,
+    EditProduitComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule, HttpClientModule,FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
