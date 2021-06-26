@@ -49,4 +49,9 @@ export class ProduitComponent implements OnInit {
 
     this.router.navigateByUrl("/edit_produit/"+btoa(url));
   }
+
+  onShowProduct(p:any) {
+    let url=p._links.self.href;
+    this.router.navigateByUrl("/show_produit/"+btoa(url));
+  }
 }
