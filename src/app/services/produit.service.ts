@@ -18,11 +18,15 @@ export class ProduitService {
     return this.http.get(this.host+"/produits?pages="+page+"&size="+size);
   }
 
-  public saveResource(url:any,data:any){
-    return this.http.post(url,data);
+  public saveResource(url:any,data:any):Observable<Produit>{
+    return this.http.post<Produit>(url,data);
   }
 
-  public getResource(url:any){
-    return this.http.get(url);
+  public getResource(url:any):Observable<Produit>{
+    return this.http.get<Produit>(url);
+  }
+
+  public updateResource(url:any,data:any){
+    return this.http.put(url,data);
   }
 }
